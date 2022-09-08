@@ -13,10 +13,10 @@ jobs:
       - name: Fetch and write data
         uses: TREEcg/LDES-Action@main
         with:
-          gh_pages_url: 'pieter.pm/RML-LDES-prototype'
+          gh_pages_url: 'treecg.github.io/Blue-Bike-to-OSLO'
           datasource_strategy: 'ldes-client'
           # url you want to fetch
-          url: 'https://www.pieter.pm/RML-LDES-prototype/bluebike.ttl'
+          url: 'https://treecg.github.io/Blue-Bike-to-OSLO/history/bluebike.ttl'
           # output directory name
           storage: 'history'
           fragmentation_strategy: 'basic'
