@@ -24194,6 +24194,11 @@ _:20221206T2132112ettl a <https://w3id.org/tree#GreaterThanOrEqualToRelation>;
   <https://w3id.org/tree#path> <http://purl.org/dc/terms/created>;
   <https://w3id.org/tree#value> "2022-12-06T21:32:11"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
+_:20221206T2144162ettl a <https://w3id.org/tree#GreaterThanOrEqualToRelation>;
+  <https://w3id.org/tree#node> <https://treecg.github.io/Blue-Bike-to-OSLO/history/20221206T214416.ttl>;
+  <https://w3id.org/tree#path> <http://purl.org/dc/terms/created>;
+  <https://w3id.org/tree#value> "2022-12-06T21:44:16"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
 <https://treecg.github.io/Blue-Bike-to-OSLO/history/root.ttl> <https://w3id.org/tree#relation>
     _:20220908T0813502ettl, _:20220908T0821352ettl, _:20220908T0833332ettl, _:20220908T0855212ettl,
     _:20220908T0924122ettl, _:20220908T0945102ettl, _:20220908T0956552ettl, _:20220908T1029482ettl,
@@ -25404,14 +25409,7 @@ _:20221206T2132112ettl a <https://w3id.org/tree#GreaterThanOrEqualToRelation>;
     _:20221206T1757202ettl, _:20221206T1826342ettl, _:20221206T1842492ettl, _:20221206T1854382ettl,
     _:20221206T1913292ettl, _:20221206T1925112ettl, _:20221206T1937222ettl, _:20221206T1949052ettl,
     _:20221206T2002202ettl, _:20221206T2023432ettl, _:20221206T2036202ettl, _:20221206T2048262ettl,
-    _:20221206T2100122ettl, _:20221206T2120022ettl, _:20221206T2132112ettl, _:20221206T2144162ettl .
-
-_:20221206T2144162ettl a <https://w3id.org/tree#GreaterThanOrEqualToRelation>;
-  <https://w3id.org/tree#node> <https://treecg.github.io/Blue-Bike-to-OSLO/history/20221206T214416.ttl>;
-  <https://w3id.org/tree#path> <http://purl.org/dc/terms/created>;
-  <https://w3id.org/tree#value> "2022-12-06T21:44:16"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-
-<https://treecg.github.io/Blue-Bike-to-OSLO/history/root.ttl> <https://w3id.org/tree#relation>
+    _:20221206T2100122ettl, _:20221206T2120022ettl, _:20221206T2132112ettl, _:20221206T2144162ettl,
     _:20221206T2156122ettl .
 
 _:20221206T2156122ettl a <https://w3id.org/tree#GreaterThanOrEqualToRelation>;
@@ -25602,3 +25600,11 @@ _:20221207T0637512ettl a <https://w3id.org/tree#GreaterThanOrEqualToRelation>;
   <https://w3id.org/tree#node> <https://treecg.github.io/Blue-Bike-to-OSLO/history/20221207T063751.ttl>;
   <https://w3id.org/tree#path> <http://purl.org/dc/terms/created>;
   <https://w3id.org/tree#value> "2022-12-07T06:37:51"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<https://treecg.github.io/Blue-Bike-to-OSLO/history/root.ttl> <https://w3id.org/tree#relation>
+    _:20221207T0649382ettl .
+
+_:20221207T0649382ettl a <https://w3id.org/tree#GreaterThanOrEqualToRelation>;
+  <https://w3id.org/tree#node> <https://treecg.github.io/Blue-Bike-to-OSLO/history/20221207T064938.ttl>;
+  <https://w3id.org/tree#path> <http://purl.org/dc/terms/created>;
+  <https://w3id.org/tree#value> "2022-12-07T06:49:38"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
