@@ -539,6 +539,12 @@
     ];
   ];
 
+  # BlueBike station: name
+  rr:predicateObjectMap [ 
+    rr:predicate schema:name ; 
+    rr:objectMap [ rml:reference "name"; rr:datatype xsd:string; ]
+  ];
+
   rr:predicateObjectMap [
     rr:predicate dcterms:isVersionOf ;
     rr:objectMap [ rr:template "https://blue-bike.be/stations/{id}"; rr:termType rr:IRI; ]
