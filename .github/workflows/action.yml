@@ -14,18 +14,10 @@ jobs:
     steps:
       # Checkout repo
       - uses: actions/checkout@v2
-        
-      # Replace secret BlueBike API URL
-      - shell: bash
-        env:
-          BLUEBIKE_API_URL: ${{ secrets.BLUEBIKE_API_URL }}
-        run: |
-          sed -i "s/SECRET_URL_BLUEBIKE_API/$BLUEBIKE_API_URL/g" private-security-data.rml.ttl
-
       # Generate RDF using RMLMapper
       - run: mkdir -p public/history
       - run: wget https://github.com/RMLio/rmlmapper-java/releases/download/v6.0.0/rmlmapper-6.0.0-r363-all.jar
-      - run: java -jar rmlmapper-6.0.0-r363-all.jar -m mapping-webapi-official.rml.ttl -psd private-security-data.rml.ttl
+      - run: java -jar rmlmapper-6.0.0-r363-all.jar -m mapping-webapi-official.rml.ttl
       # History
       - run: echo "DATE=$(date '+%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
       - run: echo "FILE=$(echo ${{ env.DATE }} | sed 's/-//g' | sed 's/://g')" >> $GITHUB_ENV
@@ -49,7 +41,6 @@ jobs:
           git add history
           git commit -m "history: update ${{ env.DATE }}"
           git push origin master
-
       # Execute deployment only on production
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

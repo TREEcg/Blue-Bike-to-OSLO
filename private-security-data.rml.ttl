@@ -7,6 +7,7 @@
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @base <http://example.org/rules/> .
 
+# This is no longer needed since BlueBike has a public API now: https://api.blue-bike.be/pub/location
 <#TDForm>
   hctl:hasTarget "SECRET_URL_BLUEBIKE_API";
 .

@@ -1,6 +1,6 @@
 {
     "ldes": {
-        "iri": "https://treecg.github.io/Blue-Bike-to-OSLO/history/bluebike.ttl",
+        "id": "https://treecg.github.io/Blue-Bike-to-OSLO/history/bluebike.ttl",
         "retentionPolicy": {
             "amount": 1,
             "type": "https://w3id.org/ldes#LatestVersionSubset"

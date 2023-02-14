@@ -1,11 +1,12 @@
 # 
-# RML mapping rules for https://datapiloten.be/bluebike/availabilities.geojson
-# (c) Dylan Van Assche (2021)
+# RML mapping rules for https://api.blue-bike.be/pub/location
+# (c) Dylan Van Assche, Brecht Van de Vyvere and Julián Rojas (2023)
 # IDLab - Ghent University - imec
 #
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix rmlt: <http://semweb.mmlab.be/ns/rml-target#> .
+@prefix void: <http://rdfs.org/ns/void#> .
 @prefix rdfs: <https://www.w3.org/2000/01/rdf-schema#> .
 @prefix comp: <http://semweb.mmlab.be/ns/rml-compression#> .
 @prefix formats: <http://www.w3.org/ns/formats/> .
@@ -17,6 +18,7 @@
 @prefix htv: <http://www.w3.org/2011/http#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix schema: <http://schema.org/> .
+@prefix mobivoc: <http://schema.mobivoc.org/#> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -36,7 +38,8 @@
 
 
 <#TargetDump> a rmlt:LogicalTarget;
-  rmlt:target [ a void:Dataset;
+  rmlt:target [ 
+    a void:Dataset;
     void:dataDump <file://./history/bluebike.ttl>;
   ];
   rmlt:serialization formats:Turtle;
@@ -44,7 +47,7 @@
 
 <#TDForm> a td:Form;
   # URL
-  # See private security file
+  hctl:hasTarget "https://api.blue-bike.be/pub/location";
   # Content type
   hctl:forContentType "application/json";
   # Read only
@@ -65,6 +68,52 @@
   td:hasPropertyAffordance <#WoTWebResource>;
 .
 
+<#TreeTriplesMap> a rr:TriplesMap;
+  rml:logicalSource [ 
+    rml:source "ldes.json";
+    rml:referenceFormulation ql:JSONPath;
+    rml:iterator "$"
+  ];
+
+  # LDES stream
+  rr:subjectMap[
+    fnml:functionValue [
+       rr:predicateObjectMap [
+           rr:predicate fno:executes ;
+           rr:objectMap [ rr:constant grel:array_join ]
+       ];
+       rr:predicateObjectMap [
+           rr:predicate grel:p_array_a ;
+           rr:objectMap [ rml:reference "ldes.id" ]
+       ];
+       rr:predicateObjectMap [
+           rr:predicate grel:p_array_a ;
+           rr:objectMap [ rr:constant "#eventstream"; ]
+       ];
+    ];
+    rr:termType rr:IRI;
+    rr:class ldes:EventStream;
+    rml:logicalTarget <#TargetDump>;
+  ];
+  # LDES members
+  rr:predicateObjectMap [
+    rr:predicate tree:member;
+    rr:objectMap [ 
+      a rr:ObjectMap;
+      rr:parentTriplesMap <#ResourceReport>;
+      rr:termType rr:IRI;
+    ];
+  ];
+  # Reference to TREE view
+  rr:predicateObjectMap [
+    rr:predicate tree:view;
+    rr:objectMap [ a rr:ObjectMap;
+      rml:reference "ldes.id";
+      rr:termType rr:IRI;
+    ];
+  ];
+.
+
 # TREE view
 <#ViewTriplesMap> a rr:TriplesMap;
   rml:logicalSource [
@@ -74,12 +123,12 @@
   ];
 
   rr:subjectMap[
-    rml:reference "ldes.iri";
+    rml:reference "ldes.id";
     rr:termType rr:IRI;
     rml:logicalTarget <#TargetDump>;
   ];
 
-  # LDES retention policy
+  # Reference to retention policy
   rr:predicateObjectMap [
     rr:predicate ldes:retentionPolicy;
     rr:objectMap [
@@ -90,7 +139,7 @@
         ];
         rr:predicateObjectMap [
             rr:predicate grel:p_array_a ;
-            rr:objectMap [ rml:reference "ldes.iri" ]
+            rr:objectMap [ rml:reference "ldes.id" ]
         ];
         rr:predicateObjectMap [
             rr:predicate grel:p_array_a ;
@@ -122,7 +171,7 @@
        ];
        rr:predicateObjectMap [
            rr:predicate grel:p_array_a ;
-           rr:objectMap [ rml:reference "ldes.iri" ]
+           rr:objectMap [ rml:reference "ldes.id" ]
        ];
        rr:predicateObjectMap [
            rr:predicate grel:p_array_a ;
@@ -138,129 +187,61 @@
     rr:predicate rdf:type;
     rr:objectMap [ rml:reference "ldes.retentionPolicy.type"; rr:termType rr:IRI; ];
   ];
-
+  # ldes:amount
   rr:predicateObjectMap [
     rr:predicate ldes:amount;
     rr:objectMap [ rml:reference "ldes.retentionPolicy.amount"; rr:datatype xsd:integer; ];
   ];
-
+  # ldes:timestampPath
   rr:predicateObjectMap [
     rr:predicate ldes:timestampPath;
     rr:object dcterms:created;
   ];
-
+  # ldes:versionOfPath
   rr:predicateObjectMap [
     rr:predicate ldes:versionOfPath;
     rr:object dcterms:isVersionOf;
   ];
 .
 
-<#TreeTriplesMap> a rr:TriplesMap;
-  rml:logicalSource [ 
-    rml:source "ldes.json";
-    rml:referenceFormulation ql:JSONPath;
-    rml:iterator "$"
-  ];
-
-  # LDES stream
-  rr:subjectMap[
-    fnml:functionValue [
-       rr:predicateObjectMap [
-           rr:predicate fno:executes ;
-           rr:objectMap [ rr:constant grel:array_join ]
-       ];
-       rr:predicateObjectMap [
-           rr:predicate grel:p_array_a ;
-           rr:objectMap [ rml:reference "ldes.iri" ]
-       ];
-       rr:predicateObjectMap [
-           rr:predicate grel:p_array_a ;
-           rr:objectMap [ rr:constant "#eventstream"; ]
-       ];
-    ];
-    rr:termType rr:IRI;
-    rr:class ldes:EventStream;
-    rml:logicalTarget <#TargetDump>;
-  ];
-
-  
-
-  rr:predicateObjectMap [
-    rr:predicate tree:member;
-    rr:objectMap [ 
-      a rr:ObjectMap;
-      rr:parentTriplesMap <#ResourceReport>;
-      rr:termType rr:IRI;
-    ];
-  ];
-  # TREE view
-  rr:predicateObjectMap [
-    rr:predicate tree:view;
-    rr:objectMap [ a rr:ObjectMap;
-      rml:reference "ldes.iri";
-      rr:termType rr:IRI;
-    ];
-  ];
-.
+# Member mappings
 <#ResourceReport> a rr:TriplesMap;
-  rml:logicalSource [ a rml:LogicalSource;
+  rml:logicalSource [ 
+    a rml:LogicalSource;
     rml:source <#WoTWebAPISource>;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
-  rr:subjectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
 
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
+  # hubs:ResourceReport
+  rr:subjectMap [
     rr:termType rr:IRI;
     rml:logicalTarget <#TargetDump>;
+    rr:template "https://blue-bike.be/resourcereports/{id}#{last_seen}";
   ];
-  rr:predicateObjectMap [
-    rr:predicate hubs:number;
-    rr:objectMap [
-      rml:reference "bikes_available"; rr:datatype xsd:integer;
-    ];
-  ];
+
+  # rdf:type
   rr:predicateObjectMap [
     rr:predicate rdf:type;
     rr:objectMap [
       rr:constant hubs:ResourceReport;  rr:termType rr:IRI;
     ];
   ];
+  # hubs:number
+  rr:predicateObjectMap [
+    rr:predicate hubs:number;
+    rr:objectMap [
+      rml:reference "bikes_available"; rr:datatype xsd:integer;
+    ];
+  ];
+  # hubs:service
   rr:predicateObjectMap [
     rr:predicate hubs:service;
     rr:objectMap[
       rr:constant "https://blue-bike.be/#me";  rr:termType rr:IRI;
     ];
   ];
+  # elements:date
   rr:predicateObjectMap [
     rr:predicate elements:date;
     rr:objectMap[
@@ -268,363 +249,101 @@
       rr:datatype xsd:dateTime;
     ]; 
   ];
+  # Referene to Vervoermiddel (dienst:vervoermiddel)
   rr:predicateObjectMap[
     rr:predicate dienst:vervoermiddel;
-    rr:objectMap[
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/vervoermiddel/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
-    rr:termType rr:IRI;
+    rr:objectMap [
+      rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/resourcereports/vervoermiddel/{id}#{last_seen}";
     ];
   ];
+  # Reference to Status (hubs:status)
   rr:predicateObjectMap[
     rr:predicate hubs:status;
     rr:objectMap[
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/status/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
-    rr:termType rr:IRI;
+      rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/resourcereports/status/{id}#{last_seen}";
     ];
   ];
+  # Reference to Actuator (hubs:propulsion)
   rr:predicateObjectMap[
     rr:predicate hubs:propulsion;
     rr:objectMap[
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/actuator/{id}" ]
-        ];
-        rr:predicateObjectMap [
-          rr:predicate grel:p_array_a ;
-          rr:objectMap [ 
-            fnml:functionValue [
-              rr:predicateObjectMap [
-                  rr:predicate fno:executes ;
-                  rr:objectMap [ rr:constant grel:array_join ]
-              ];
-      
-              rr:predicateObjectMap [
-                  rr:predicate grel:p_array_a ;
-                  rr:objectMap [ rr:constant "#" ]
-              ];
-
-              rr:predicateObjectMap [
-                  rr:predicate grel:p_array_a ;
-                  rr:objectMap [ rml:reference "last_seen" ]
-              ];
-            ];
-          ];
-        ];
-      ];
       rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/resourcereports/actuator/{id}#{last_seen}";
     ];
   ];
+  # Reference to Type (dcterms:type)
   rr:predicateObjectMap[
     rr:predicate dcterms:type;
     rr:objectMap[
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/type/{id}" ]
-        ];
-        rr:predicateObjectMap [
-          rr:predicate grel:p_array_a ;
-          rr:objectMap [ 
-            fnml:functionValue [
-              rr:predicateObjectMap [
-                  rr:predicate fno:executes ;
-                  rr:objectMap [ rr:constant grel:array_join ]
-              ];
-      
-              rr:predicateObjectMap [
-                  rr:predicate grel:p_array_a ;
-                  rr:objectMap [ rr:constant "#" ]
-              ];
-
-              rr:predicateObjectMap [
-                  rr:predicate grel:p_array_a ;
-                  rr:objectMap [ rml:reference "last_seen" ]
-              ];
-            ];
-          ];
-        ];
-      ];
       rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/resourcereports/type/{id}#{last_seen}";
     ];
   ];
+  # Reference to Station (hubs:location)
   rr:predicateObjectMap [
     rr:predicate hubs:location;
     rr:objectMap[
-      fnml:functionValue [
-        rr:predicateObjectMap [
-          rr:predicate fno:executes ;
-          rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-          rr:predicate grel:p_array_a ;
-          rr:objectMap [ rr:template "https://blue-bike.be/stations/{id}" ]
-        ];
-        rr:predicateObjectMap [
-          rr:predicate grel:p_array_a ;
-          rr:objectMap [ 
-            fnml:functionValue [
-              rr:predicateObjectMap [
-                rr:predicate fno:executes ;
-                rr:objectMap [ rr:constant grel:array_join ]
-              ];
-      
-              rr:predicateObjectMap [
-                rr:predicate grel:p_array_a ;
-                rr:objectMap [ rr:constant "#" ]
-              ];
-
-              rr:predicateObjectMap [
-                rr:predicate grel:p_array_a ;
-                rr:objectMap [ rml:reference "last_seen" ]
-              ];
-            ];
-          ];
-        ];
-      ];
       rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/stations/{id}#{last_seen}";
     ];
   ];
 .
+
+# Stations
 <#StationsTriplesMap> a rr:TriplesMap;
   rml:logicalSource [ a rml:LogicalSource;
     rml:source <#WoTWebAPISource>;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
-  # Unique IRI generation: $stationId#$generatedAtTime
+  # Unique IRI generation: $stationId#$generatedAtTime (id#last_seen)
   rr:subjectMap [ 
-    fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/stations/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/stations/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
-
   # rdf:type
   rr:predicateObjectMap [
     rr:predicate rdf:type;
-    rr:objectMap [
-      fnml:functionValue [
-      	rr:predicateObjectMap [
-          rr:predicate fno:executes ;
-      	  rr:objectMap [ rr:constant grel:controls_if ]
-        ];
-        rr:predicateObjectMap [
-          rr:predicate grel:bool_b ;
-          rr:objectMap [ 
-            fnml:functionValue [
-              rr:predicateObjectMap [
-                rr:predicate fno:executes;
-                rr:objectMap [ rr:constant idlab:equal ];
-              ];
-              rr:predicateObjectMap [
-                rr:predicate grel:valueParameter;
-                rr:objectMap [ rml:reference "type" ];
-              ];
-              rr:predicateObjectMap [
-                rr:predicate grel:valueParameter2;
-                rr:objectMap [ rr:constant "1" ];
-              ];
-            ];
-            rr:datatype xsd:boolean
-          ];
-        ];
-        rr:predicateObjectMap [
-          rr:predicate grel:any_true ;
-          rr:objectMap [ rr:constant "http://schema.mobivoc.org/#BicycleParkingStation"; rr:termType rr:IRI ]
-        ];
-        rr:predicateObjectMap [
-          rr:predicate grel:any_false ;
-          rr:objectMap [ rr:constant "http://schema.mobivoc.org/#BicycleParkingStation"; rr:termType rr:IRI ]
-        ];
-      ];
-      rr:termType rr:IRI;
+    rr:objectMap [ 
+      rr:constant mobivoc:BicycleParkingStation;
+      rr:termType rr:IRI 
     ];
   ];
-
-  # BlueBike station: name
+  # schema:name
   rr:predicateObjectMap [ 
     rr:predicate schema:name ; 
     rr:objectMap [ rml:reference "name"; rr:datatype xsd:string; ]
   ];
-
+  # dcterms:isVersionOf
   rr:predicateObjectMap [
     rr:predicate dcterms:isVersionOf ;
-    rr:objectMap [ rr:template "https://blue-bike.be/stations/{id}"; rr:termType rr:IRI; ]
+    rr:objectMap [ 
+      rr:template "https://blue-bike.be/stations/{id}"; 
+      rr:termType rr:IRI; 
+    ]
   ];
-
+  # Reference to Capacity (mobivoc:capacity)
   rr:predicateObjectMap[
-    rr:predicate schema:capacity;
+    rr:predicate mobivoc:capacity;
     rr:objectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/stations/capacity/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
-    rr:termType rr:IRI;
+      rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/stations/capacity/{id}#{last_seen}";
     ];
   ];
+  # w3:geometry
   rr:predicateObjectMap[
     rr:predicate w3:geometry;
     rr:objectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/stations/geometry/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
-    rr:termType rr:IRI;
+      rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/stations/geometry/{id}#{last_seen}";
     ];
   ];
 .
+
+# Capacities
 <#Capacity>  a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
@@ -632,47 +351,21 @@
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
-  rr:subjectMap [
-    fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/stations/capacity/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
 
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
+  rr:subjectMap [
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/stations/capacity/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
+
+  # rdf:type
   rr:predicateObjectMap[
     rr:predicate rdf:type;
-    rr:objectMap [rr:constant schema:Capacity; rr:termType rr:IRI;];
+    rr:objectMap [rr:constant mobivoc:Capacity; rr:termType rr:IRI;];
   ];
+  # Total capacity (mobivoc:totalCapacity) as the sum of bikes_in_use + bikes_available
   rr:predicateObjectMap[
-    rr:predicate schema:totalCapacity;
+    rr:predicate mobivoc:totalCapacity;
     rr:objectMap[
       fnml:functionValue [
         rr:predicateObjectMap [
@@ -693,45 +386,22 @@
       rr:datatype xsd:integer;
     ];
   ];
-
+  # Current capacity (mobivoc:currentValue). This should be part of a mobivoc:RealTimeCapacity which is not model here.
+  rr:predicateObjectMap [ 
+    rr:predicate mobivoc:currentValue ; 
+    rr:objectMap [ rml:reference "bikes_available"; rr:datatype xsd:integer; ]
+  ];
+  # Reference to Vehicle Type (hubs:vehicleType)
   rr:predicateObjectMap[
     rr:predicate hubs:vehicleType;
     rr:objectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/stations/vehicleType/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
-    rr:termType rr:IRI;
+      rr:termType rr:IRI;
+      rr:template "https://blue-bike.be/stations/vehicleType/{id}#{last_seen}";
     ];
   ];
 .
+
+# Geometries
 <#Geometry> a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
@@ -740,53 +410,29 @@
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/stations/geometry/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/stations/geometry/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
+
+  # rdf:type
   rr:predicateObjectMap[
     rr:predicate rdf:type;
     rr:objectMap[
       rr:constant w3:Geometry ; rr:termType rr:IRI;
     ];
   ];
+  # opengis:asWKT
   rr:predicateObjectMap[
     rr:predicate opengis:asWKT;
     rr:objectMap[
-      rr:template "POINT({longitude} {latitude})"; rr:datatype rdfs:Literal;
+      rr:template "POINT({longitude} {latitude})"; 
+      rr:datatype rdfs:Literal;
     ];
   ];
 .
+
+# Vehicle types
 <#VehicleType> a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
@@ -795,46 +441,19 @@
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/stations/vehicleType/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/stations/vehicleType/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
+
+  # rdf:type
   rr:predicateObjectMap [
     rr:predicate rdf:type;
     rr:objectMap [
       rr:constant skos:Concept; rr:termType rr:IRI;
     ];
   ];
+  # skos:prefLabel
   rr:predicateObjectMap[
     rr:predicate skos:prefLabel;
     rr:objectMap [
@@ -843,6 +462,8 @@
     ];
   ];
 .
+
+# VervoerMiddel
 <#VervoerMiddel> a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
@@ -851,46 +472,19 @@
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/vervoermiddel/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/resourcereports/vervoermiddel/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
+
+  # rdf:type
   rr:predicateObjectMap [
     rr:predicate rdf:type;
     rr:objectMap [
       rr:constant skos:Concept; rr:termType rr:IRI;
     ];
   ];
+  # skos:prefLabel
   rr:predicateObjectMap[
     rr:predicate skos:prefLabel;
     rr:objectMap [
@@ -899,6 +493,8 @@
     ];
   ];
 .
+
+# Status
 <#Status> a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
@@ -907,46 +503,19 @@
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/status/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/resourcereports/status/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
+
+  # rdf:type
   rr:predicateObjectMap [
     rr:predicate rdf:type;
     rr:objectMap [
       rr:constant skos:Concept; rr:termType rr:IRI;
     ];
   ];
+  # skos:prefLabel
   rr:predicateObjectMap[
     rr:predicate skos:prefLabel;
     rr:objectMap [
@@ -955,6 +524,8 @@
     ];
   ];
 .
+
+# Actuators
 <#Actuator> a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
@@ -963,46 +534,19 @@
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/actuator/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/resourcereports/actuator/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
+
+  # rdf:type
   rr:predicateObjectMap [
     rr:predicate rdf:type;
     rr:objectMap [
       rr:constant skos:Concept; rr:termType rr:IRI;
     ];
   ];
+  # skos:prefLabel
   rr:predicateObjectMap[
     rr:predicate skos:prefLabel;
     rr:objectMap [
@@ -1011,6 +555,8 @@
     ];
   ];
 .
+
+# Types
 <#Type> a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
@@ -1019,46 +565,19 @@
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
-      fnml:functionValue [
-        rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ rr:template "https://blue-bike.be/resourcereports/type/{id}" ]
-        ];
-        rr:predicateObjectMap [
-            rr:predicate grel:p_array_a ;
-            rr:objectMap [ 
-                fnml:functionValue [
-                    rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant grel:array_join ]
-                    ];
-            
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "#" ]
-                    ];
-
-                    rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rml:reference "last_seen" ]
-                    ];
-                ];
-            ];
-        ];
-    ];
     rr:termType rr:IRI;
+    rr:template "https://blue-bike.be/resourcereports/type/{id}#{last_seen}";
     rml:logicalTarget <#TargetDump>;
   ];
+
+  # rdf:type
   rr:predicateObjectMap [
     rr:predicate rdf:type;
     rr:objectMap [
       rr:constant skos:Concept; rr:termType rr:IRI;
     ];
   ];
+  # skos:prefLabel
   rr:predicateObjectMap[
     rr:predicate skos:prefLabel;
     rr:objectMap [
