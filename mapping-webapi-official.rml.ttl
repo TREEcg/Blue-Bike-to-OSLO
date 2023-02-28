@@ -427,7 +427,7 @@
     rr:predicate opengis:asWKT;
     rr:objectMap[
       rr:template "POINT({longitude} {latitude})"; 
-      rr:datatype rdfs:Literal;
+      rr:datatype opengis:wktLiteral;
     ];
   ];
 .
