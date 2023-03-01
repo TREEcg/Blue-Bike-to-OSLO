@@ -17,7 +17,7 @@
     <http://schema.org/name> "Gare de Mons";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/71#2023-02-14T11:49:08>.
 <https://blue-bike.be/stations/geometry/71#2023-02-14T11:49:08> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.944177000000 50.455693000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.944177000000 50.455693000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/71#2023-02-14T11:49:08> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 10;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/71#2023-02-14T11:49:08>.
@@ -47,7 +47,7 @@
     <http://schema.org/name> "Station Gent-Dampoort";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/72#2023-02-14T11:48:41>.
 <https://blue-bike.be/stations/geometry/72#2023-02-14T11:48:41> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.740194000000 51.056083000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.740194000000 51.056083000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/72#2023-02-14T11:48:41> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 65;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/72#2023-02-14T11:48:41>.
@@ -77,7 +77,7 @@
     <http://schema.org/name> "Station Gent-St. P. (St.-Denijslaan)";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/73#2023-02-14T11:51:38>.
 <https://blue-bike.be/stations/geometry/73#2023-02-14T11:51:38> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/73#2023-02-14T11:51:38> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 58;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/73#2023-02-14T11:51:38>.
@@ -107,7 +107,7 @@
     <http://schema.org/name> "Station Mechelen";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/74#2023-02-14T11:48:36>.
 <https://blue-bike.be/stations/geometry/74#2023-02-14T11:48:36> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.483000000000 51.017806000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.483000000000 51.017806000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/74#2023-02-14T11:48:36> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 82;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/74#2023-02-14T11:48:36>.
@@ -137,7 +137,7 @@
     <http://schema.org/name> "Station Vilvoorde";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/75#2023-02-14T11:47:48>.
 <https://blue-bike.be/stations/geometry/75#2023-02-14T11:47:48> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.433000000000 50.924750000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.433000000000 50.924750000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/75#2023-02-14T11:47:48> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 43;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/75#2023-02-14T11:47:48>.
@@ -167,7 +167,7 @@
     <http://schema.org/name> "Station Antwerpen-Berchem";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/76#2023-02-14T11:49:50>.
 <https://blue-bike.be/stations/geometry/76#2023-02-14T11:49:50> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.431682000000 51.199503000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.431682000000 51.199503000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/76#2023-02-14T11:49:50> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 64;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/76#2023-02-14T11:49:50>.
@@ -197,7 +197,7 @@
     <http://schema.org/name> "Station Lier";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/77#2023-02-14T11:52:11>.
 <https://blue-bike.be/stations/geometry/77#2023-02-14T11:52:11> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.561500000000 51.135778000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.561500000000 51.135778000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/77#2023-02-14T11:52:11> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 28;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/77#2023-02-14T11:52:11>.
@@ -227,7 +227,7 @@
     <http://schema.org/name> "Station Mortsel Oude God";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/78#2023-02-14T11:48:51>.
 <https://blue-bike.be/stations/geometry/78#2023-02-14T11:48:51> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.455944000000 51.171222000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.455944000000 51.171222000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/78#2023-02-14T11:48:51> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 7;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/78#2023-02-14T11:48:51>.
@@ -257,7 +257,7 @@
     <http://schema.org/name> "Station Herentals";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/79#2023-02-14T11:50:58>.
 <https://blue-bike.be/stations/geometry/79#2023-02-14T11:50:58> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.829278000000 51.181139000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.829278000000 51.181139000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/79#2023-02-14T11:50:58> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 29;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/79#2023-02-14T11:50:58>.
@@ -287,7 +287,7 @@
     <http://schema.org/name> "Station Turnhout";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/80#2023-02-14T11:49:06>.
 <https://blue-bike.be/stations/geometry/80#2023-02-14T11:49:06> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.937611000000 51.321944000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.937611000000 51.321944000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/80#2023-02-14T11:49:06> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 20;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/80#2023-02-14T11:49:06>.
@@ -317,7 +317,7 @@
     <http://schema.org/name> "Station Aalst";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/81#2023-02-14T11:50:32>.
 <https://blue-bike.be/stations/geometry/81#2023-02-14T11:50:32> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.038623000000 50.942944000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.038623000000 50.942944000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/81#2023-02-14T11:50:32> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 16;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/81#2023-02-14T11:50:32>.
@@ -347,7 +347,7 @@
     <http://schema.org/name> "Station Dendermonde";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/89#2023-02-14T11:51:51>.
 <https://blue-bike.be/stations/geometry/89#2023-02-14T11:51:51> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.101778000000 51.023444000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.101778000000 51.023444000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/89#2023-02-14T11:51:51> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 32;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/89#2023-02-14T11:51:51>.
@@ -377,7 +377,7 @@
     <http://schema.org/name> "Brussel Luxemburg/Bruxelles Luxembourg";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/90#2023-02-14T11:51:11>.
 <https://blue-bike.be/stations/geometry/90#2023-02-14T11:51:11> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.372889000000 50.838194000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.372889000000 50.838194000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/90#2023-02-14T11:51:11> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 9;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/90#2023-02-14T11:51:11>.
@@ -407,7 +407,7 @@
     <http://schema.org/name> "Station Asse";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/91#2023-02-14T11:52:12>.
 <https://blue-bike.be/stations/geometry/91#2023-02-14T11:52:12> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.207806000000 50.906306000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.207806000000 50.906306000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/91#2023-02-14T11:52:12> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 12;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/91#2023-02-14T11:52:12>.
@@ -437,7 +437,7 @@
     <http://schema.org/name> "Station Diest";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/92#2023-02-14T11:51:54>.
 <https://blue-bike.be/stations/geometry/92#2023-02-14T11:51:54> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.050833000000 50.992972000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.050833000000 50.992972000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/92#2023-02-14T11:51:54> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 25;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/92#2023-02-14T11:51:54>.
@@ -467,7 +467,7 @@
     <http://schema.org/name> "Station Genk";
     <http://www.w3.org/ns/locn#geometry> <https://blue-bike.be/stations/geometry/93#2023-02-14T11:48:18>.
 <https://blue-bike.be/stations/geometry/93#2023-02-14T11:48:18> a <http://www.w3.org/ns/locn#Geometry>;
-    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.497111000000 50.967000000000)"^^<https://www.w3.org/2000/01/rdf-schema#Literal>.
+    <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.497111000000 50.967000000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal>.
 <https://blue-bike.be/stations/capacity/93#2023-02-14T11:48:18> a <http://schema.org/Capacity>;
     <http://schema.org/totalCapacity> 7;
     <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/93#2023-02-14T11:48:18>.
