@@ -3638,349 +3638,349 @@
   <https://purl.eu/ns/mobility/passenger-transport-hubs#vehicleType> <https://blue-bike.be/stations/vehicleType/93#2022-12-10T17:36:05> .
 
 <https://blue-bike.be/stations/geometry/103#2022-12-10T17:35:18> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.988778000000 51.168778000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.988778000000 51.168778000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/104#2022-12-10T17:35:38> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.574750000000 51.180972000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.574750000000 51.180972000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/105#2022-12-10T17:38:33> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.026167000000 50.839306000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.026167000000 50.839306000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/108#2022-12-10T17:34:26> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.582861000000 51.128389000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.582861000000 51.128389000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/109#2022-12-10T17:35:40> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.573500000000 51.125194000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.573500000000 51.125194000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/111#2022-12-10T17:34:10> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.708583000000 51.074167000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.708583000000 51.074167000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/112#2022-12-10T17:37:12> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.489750000000 51.030222000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.489750000000 51.030222000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/113#2022-12-10T17:38:30> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.602000000000 50.851333000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.602000000000 50.851333000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/114#2022-12-10T17:34:02> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.872528000000 50.770528000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.872528000000 50.770528000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/115#2022-12-10T17:38:17> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.473444000000 50.784111000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.473444000000 50.784111000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/116#2022-12-10T17:34:41> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.876222000000 50.848500000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.876222000000 50.848500000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/117#2022-12-10T17:35:20> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.448750000000 51.091889000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.448750000000 51.091889000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/118#2022-12-10T17:38:59> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.525778000000 50.982417000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.525778000000 50.982417000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/119#2022-12-10T17:35:27> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.427361000000 50.881722000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.427361000000 50.881722000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/120#2022-12-10T17:36:30> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.925639000000 50.808222000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.925639000000 50.808222000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/122#2022-12-10T17:37:13> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.735738000000 50.854554000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.735738000000 50.854554000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/123#2022-12-10T17:36:53> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.632333000000 51.357028000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.632333000000 51.357028000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/124#2022-12-10T17:35:04> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.484311000000 51.029332000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.484311000000 51.029332000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/125#2022-12-10T17:35:54> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.460556000000 51.365056000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.460556000000 51.365056000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/127#2022-12-10T17:38:40> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.476111000000 51.134278000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.476111000000 51.134278000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/128#2022-12-10T17:36:59> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.329817000000 50.990612000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.329817000000 50.990612000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/129#2022-12-10T17:35:20> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.470866000000 50.885208000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.470866000000 50.885208000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/130#2022-12-10T17:37:51> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.390815000000 51.197956000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.390815000000 51.197956000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/131#2022-12-10T17:34:33> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.716641000000 50.882490000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.716641000000 50.882490000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/132#2022-12-10T17:34:12> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.214821000000 50.920906000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.214821000000 50.920906000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/133#2022-12-10T17:36:45> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/135#2022-12-10T17:37:49> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.216080100000 51.196771900000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.216080100000 51.196771900000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/136#2022-12-10T17:36:31> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.260263000000 51.208483000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.260263000000 51.208483000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/137#2022-12-10T17:36:30> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.695441000000 50.862615000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.695441000000 50.862615000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/139#2022-12-10T17:35:08> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.640126000000 50.929443000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.640126000000 50.929443000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/140#2022-12-10T17:36:55> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.654694000000 50.930522000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.654694000000 50.930522000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/141#2022-12-10T17:34:30> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.313743000000 50.855703000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.313743000000 50.855703000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/142#2022-12-10T17:38:21> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.112421000000 51.181190000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.112421000000 51.181190000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/143#2022-12-10T17:34:29> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.329820851913 50.932948204381)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.329820851913 50.932948204381)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/144#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.424388000000 51.245426000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.424388000000 51.245426000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/145#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.427910000000 51.261640000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.427910000000 51.261640000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/146#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.435012000000 51.284248000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.435012000000 51.284248000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/147#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.434365000000 51.281430000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.434365000000 51.281430000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/148#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.447706000000 50.889126000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.447706000000 50.889126000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/149#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.421000000000 51.217611000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.421000000000 51.217611000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/151#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.746427000000 51.165508000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.746427000000 51.165508000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/152#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.613315000000 50.966578000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.613315000000 50.966578000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/153#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.281699000000 51.038330000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.281699000000 51.038330000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/154#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.312579000000 51.211770000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.312579000000 51.211770000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/155#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.329922000000 51.033617000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.329922000000 51.033617000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/156#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.451532000000 51.462176000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.451532000000 51.462176000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/157#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.575647000000 51.064208000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.575647000000 51.064208000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/158#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.221356000000 51.126293000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.221356000000 51.126293000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/159#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.182521000000 50.810926000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.182521000000 50.810926000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/160#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.041885000000 51.073108000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.041885000000 51.073108000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/161#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.814341000000 50.869480000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.814341000000 50.869480000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/162#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.464733000000 51.154119500000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.464733000000 51.154119500000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/163#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.079402000000 50.748290000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.079402000000 50.748290000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/164#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.413591000000 50.923187000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.413591000000 50.923187000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/165#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.361626000000 50.747786000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.361626000000 50.747786000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/166#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.133800000000 51.311900000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.133800000000 51.311900000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/167#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.601611000000 51.077376000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.601611000000 51.077376000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/168#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.239668000000 51.334168000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.239668000000 51.334168000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/169#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.284540000000 51.340180000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.284540000000 51.340180000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/170#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.195476000000 51.326510000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.195476000000 51.326510000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/173#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.333756181866 50.835529468767)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.333756181866 50.835529468767)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/174#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.602000000000 50.851333000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.602000000000 50.851333000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/175#2022-12-10T17:38:31> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.764767000000 51.019906000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.764767000000 51.019906000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/176#2022-12-10T17:37:24> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.654975000000 51.047438000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.654975000000 51.047438000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/177#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.944743000000 50.819656000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.944743000000 50.819656000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/178#2022-12-10T17:34:22> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.719586000000 51.089503000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.719586000000 51.089503000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/179#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.747323000000 50.956061000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.747323000000 50.956061000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/180#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.432225000000 50.878262000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.432225000000 50.878262000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/181#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.183928000000 51.329778000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.183928000000 51.329778000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/182#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.466811000000 51.390916000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.466811000000 51.390916000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/183#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.390746000000 51.197974000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.390746000000 51.197974000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/186#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.549415697127 50.855892828152)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.549415697127 50.855892828152)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/187#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.087636357275 50.753215791001)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.087636357275 50.753215791001)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/190#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.495192546475 51.163288567851)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.495192546475 51.163288567851)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/192#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/193#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.534556000000 50.978194000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.534556000000 50.978194000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/194#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.483694000000 51.016184000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.483694000000 51.016184000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/195#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.432695000000 51.200465000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.432695000000 51.200465000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/196#> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.224162000000 50.953699000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.224162000000 50.953699000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/48#2022-12-10T17:34:29> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.421000000000 51.217611000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.421000000000 51.217611000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/49#2022-12-10T17:37:18> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.355861000000 50.844833000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.355861000000 50.844833000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/50#2022-12-10T17:38:33> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.715667000000 50.880028000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.715667000000 50.880028000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/51#2022-12-10T17:34:06> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.823778000000 50.983778000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.823778000000 50.983778000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/52#2022-12-10T17:37:19> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.176167000000 50.817222000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.176167000000 50.817222000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/53#2022-12-10T17:35:37> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.327139000000 50.931028000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.327139000000 50.931028000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/54#2022-12-10T17:34:05> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.115389000000 51.190639000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.115389000000 51.190639000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/55#2022-12-10T17:35:21> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.361356000000 50.861514000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.361356000000 50.861514000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/57#2022-12-10T17:38:25> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.240500000000 50.733583000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.240500000000 50.733583000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/59#2022-12-10T17:34:42> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.861944000000 50.468556000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.861944000000 50.468556000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/60#2022-12-10T17:36:46> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.262944000000 50.823667000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.262944000000 50.823667000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/61#2022-12-10T17:35:42> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.534556000000 50.978194000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.534556000000 50.978194000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/62#2022-12-10T17:36:42> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.424889000000 50.891917000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.424889000000 50.891917000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/63#2022-12-10T17:34:27> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.565750000000 50.625722000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.565750000000 50.625722000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/64#2022-12-10T17:37:29> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.218639000000 51.196972000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.218639000000 51.196972000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/65#2022-12-10T17:37:46> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.925639000000 51.228306000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(2.925639000000 51.228306000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/66#2022-12-10T17:35:46> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.105611000000 51.065083000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.105611000000 51.065083000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/68#2022-12-10T17:36:40> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.130611000000 50.948944000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.130611000000 50.948944000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/69#2022-12-10T17:37:10> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.143528000000 51.171444000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.143528000000 51.171444000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/70#2022-12-10T17:37:50> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.986722000000 51.107444000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.986722000000 51.107444000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/71#2022-12-10T17:37:26> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.944177000000 50.455693000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.944177000000 50.455693000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/72#2022-12-10T17:37:29> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.740194000000 51.056083000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.740194000000 51.056083000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/73#2022-12-10T17:38:28> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(3.709667000000 51.034889000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/74#2022-12-10T17:35:16> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.483000000000 51.017806000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.483000000000 51.017806000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/75#2022-12-10T17:38:22> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.433000000000 50.924750000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.433000000000 50.924750000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/76#2022-12-10T17:37:34> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.431682000000 51.199503000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.431682000000 51.199503000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/77#2022-12-10T17:35:29> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.561500000000 51.135778000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.561500000000 51.135778000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/78#2022-12-10T17:35:43> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.455944000000 51.171222000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.455944000000 51.171222000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/79#2022-12-10T17:36:10> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.829278000000 51.181139000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.829278000000 51.181139000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/80#2022-12-10T17:35:43> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.937611000000 51.321944000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.937611000000 51.321944000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/81#2022-12-10T17:35:44> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.038623000000 50.942944000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.038623000000 50.942944000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/89#2022-12-10T17:36:25> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.101778000000 51.023444000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.101778000000 51.023444000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/90#2022-12-07T10:03:54> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.372889000000 50.838194000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.372889000000 50.838194000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/91#2022-12-10T17:34:07> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.207806000000 50.906306000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(4.207806000000 50.906306000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/92#2022-12-10T17:37:19> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.050833000000 50.992972000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.050833000000 50.992972000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/geometry/93#2022-12-10T17:36:05> a <http://www.w3.org/ns/locn#Geometry>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.497111000000 50.967000000000)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(5.497111000000 50.967000000000)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 <https://blue-bike.be/stations/vehicleType/103#2022-12-10T17:35:18> a <http://www.w3.org/2004/02/skos/core#Concept>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "bicycle"@en .
