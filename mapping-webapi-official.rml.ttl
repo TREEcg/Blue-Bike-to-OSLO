@@ -77,20 +77,7 @@
 
   # LDES stream
   rr:subjectMap[
-    fnml:functionValue [
-       rr:predicateObjectMap [
-           rr:predicate fno:executes ;
-           rr:objectMap [ rr:constant grel:array_join ]
-       ];
-       rr:predicateObjectMap [
-           rr:predicate grel:p_array_a ;
-           rr:objectMap [ rml:reference "ldes.id" ]
-       ];
-       rr:predicateObjectMap [
-           rr:predicate grel:p_array_a ;
-           rr:objectMap [ rr:constant "#eventstream"; ]
-       ];
-    ];
+    rr:template "{ldes.id}#eventstream";
     rr:termType rr:IRI;
     rr:class ldes:EventStream;
     rml:logicalTarget <#TargetDump>;
