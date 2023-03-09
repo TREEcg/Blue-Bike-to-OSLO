@@ -34,7 +34,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix opengis: <http://www.opengis.net/ont/geosparql#> .
 @prefix dienst: <https://purl.eu/ns/mobility/passenger-transport-hubs#Mobiliteitsdienst.> .
-@base <http://example.org/rules/> .
 
 _:TargetDump a rmlt:LogicalTarget;
   rmlt:target [ 
@@ -65,39 +64,6 @@ _:WoTWebAPISource a td:PropertyAffordance;
 
 _:WoTWebAPI a td:Thing;
   td:hasPropertyAffordance _:WoTWebResource;
-.
-
-_:TreeTriplesMap a rr:TriplesMap;
-  rml:logicalSource [ 
-    rml:source "ldes.json";
-    rml:referenceFormulation ql:JSONPath;
-    rml:iterator "$"
-  ];
-
-  # LDES stream
-  rr:subjectMap[
-    rr:template "{ldes.id}#eventstream";
-    rr:termType rr:IRI;
-    rr:class ldes:EventStream;
-    rml:logicalTarget _:TargetDump;
-  ];
-  # LDES members
-  rr:predicateObjectMap [
-    rr:predicate tree:member;
-    rr:objectMap [ 
-      a rr:ObjectMap;
-      rr:parentTriplesMap _:ResourceReport;
-      rr:termType rr:IRI;
-    ];
-  ];
-  # Reference to TREE view
-  rr:predicateObjectMap [
-    rr:predicate tree:view;
-    rr:objectMap [ a rr:ObjectMap;
-      rml:reference "ldes.id";
-      rr:termType rr:IRI;
-    ];
-  ];
 .
 
 # TREE view
@@ -136,6 +102,53 @@ _:ViewTriplesMap a rr:TriplesMap;
             rr:objectMap [ rr:constant ""; ]
         ];
       ];
+      rr:termType rr:IRI;
+    ];
+  ];
+.
+
+# LDES stream
+_:TreeTriplesMap a rr:TriplesMap;
+  rml:logicalSource [ 
+    rml:source "ldes.json";
+    rml:referenceFormulation ql:JSONPath;
+    rml:iterator "$"
+  ];
+
+  rr:subjectMap[
+    fnml:functionValue [
+       rr:predicateObjectMap [
+           rr:predicate fno:executes ;
+           rr:objectMap [ rr:constant grel:array_join ]
+       ];
+       rr:predicateObjectMap [
+           rr:predicate grel:p_array_a ;
+           rr:objectMap [ rml:reference "ldes.id" ]
+       ];
+       rr:predicateObjectMap [
+           rr:predicate grel:p_array_a ;
+           rr:objectMap [ rr:constant "#eventstream"; ]
+       ];
+    ];
+    rr:termType rr:IRI;
+    rr:class ldes:EventStream;
+    rml:logicalTarget _:TargetDump;
+  ];
+
+  # LDES members
+  rr:predicateObjectMap [
+    rr:predicate tree:member;
+    rr:objectMap [ 
+      a rr:ObjectMap;
+      rr:parentTriplesMap _:ResourceReport;
+      rr:termType rr:IRI;
+    ];
+  ];
+  # Reference to TREE view
+  rr:predicateObjectMap [
+    rr:predicate tree:view;
+    rr:objectMap [ a rr:ObjectMap;
+      rml:reference "ldes.id";
       rr:termType rr:IRI;
     ];
   ];
