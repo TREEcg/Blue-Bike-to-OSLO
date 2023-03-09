@@ -34,10 +34,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix opengis: <http://www.opengis.net/ont/geosparql#> .
 @prefix dienst: <https://purl.eu/ns/mobility/passenger-transport-hubs#Mobiliteitsdienst.> .
-@prefix : <http://example.org/rules/> .
+@base <http://example.org/rules/> .
 
-
-:TargetDump a rmlt:LogicalTarget;
+_:TargetDump a rmlt:LogicalTarget;
   rmlt:target [ 
     a void:Dataset;
     void:dataDump <file://./history/bluebike.ttl>;
@@ -45,7 +44,7 @@
   rmlt:serialization formats:Turtle;
 .
 
-:TDForm a td:Form;
+_:TDForm a td:Form;
   # URL
   hctl:hasTarget "https://api.blue-bike.be/pub/location";
   # Content type
@@ -60,15 +59,15 @@
   ]);
 .
 
-:WoTWebAPISource: a td:PropertyAffordance;
-  td:hasForm :TDForm;
+_:WoTWebAPISource a td:PropertyAffordance;
+  td:hasForm _:TDForm;
 .
 
-:WoTWebAPI a td:Thing;
-  td:hasPropertyAffordance :WoTWebResource;
+_:WoTWebAPI a td:Thing;
+  td:hasPropertyAffordance _:WoTWebResource;
 .
 
-:TreeTriplesMap a rr:TriplesMap;
+_:TreeTriplesMap a rr:TriplesMap;
   rml:logicalSource [ 
     rml:source "ldes.json";
     rml:referenceFormulation ql:JSONPath;
@@ -80,14 +79,14 @@
     rr:template "{ldes.id}#eventstream";
     rr:termType rr:IRI;
     rr:class ldes:EventStream;
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
   # LDES members
   rr:predicateObjectMap [
     rr:predicate tree:member;
     rr:objectMap [ 
       a rr:ObjectMap;
-      rr:parentTriplesMap :ResourceReport;
+      rr:parentTriplesMap _:ResourceReport;
       rr:termType rr:IRI;
     ];
   ];
@@ -102,7 +101,7 @@
 .
 
 # TREE view
-:ViewTriplesMap a rr:TriplesMap;
+_:ViewTriplesMap a rr:TriplesMap;
   rml:logicalSource [
     rml:source "ldes.json";
     rml:referenceFormulation ql:JSONPath;
@@ -112,7 +111,7 @@
   rr:subjectMap[
     rml:reference "ldes.id";
     rr:termType rr:IRI;
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # Reference to retention policy
@@ -143,7 +142,7 @@
 .
 
 # LDES RetentionPolicy
-:RetentionPolicyTriplesMap a rr:TriplesMap;
+_:RetentionPolicyTriplesMap a rr:TriplesMap;
   rml:logicalSource [
     rml:source "ldes.json";
     rml:referenceFormulation ql:JSONPath;
@@ -166,7 +165,7 @@
        ];
     ];
     rr:termType rr:IRI;
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
@@ -192,10 +191,10 @@
 .
 
 # Member mappings
-:ResourceReport a rr:TriplesMap;
+_:ResourceReport a rr:TriplesMap;
   rml:logicalSource [ 
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
@@ -203,7 +202,7 @@
   # hubs:ResourceReport
   rr:subjectMap [
     rr:termType rr:IRI;
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
     rr:template "https://blue-bike.be/resourcereports/{id}#{last_seen}";
   ];
 
@@ -279,9 +278,9 @@
 .
 
 # Stations
-:StationsTriplesMap a rr:TriplesMap;
+_:StationsTriplesMap a rr:TriplesMap;
   rml:logicalSource [ a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
@@ -289,7 +288,7 @@
   rr:subjectMap [ 
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/stations/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
   # rdf:type
   rr:predicateObjectMap [
@@ -331,10 +330,10 @@
 .
 
 # Capacities
-:Capacity a rr:TriplesMap;
+_:Capacity  a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
@@ -342,7 +341,7 @@
   rr:subjectMap [
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/stations/capacity/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
@@ -389,17 +388,17 @@
 .
 
 # Geometries
-:Geometry a rr:TriplesMap;
+_:Geometry a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/stations/geometry/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
@@ -420,17 +419,17 @@
 .
 
 # Vehicle types
-:VehicleType a rr:TriplesMap;
+_:VehicleType a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/stations/vehicleType/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
@@ -451,17 +450,17 @@
 .
 
 # VervoerMiddel
-:VervoerMiddel a rr:TriplesMap;
+_:VervoerMiddel a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/resourcereports/vervoermiddel/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
@@ -482,17 +481,17 @@
 .
 
 # Status
-:Status a rr:TriplesMap;
+_:Status a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/resourcereports/status/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
@@ -513,17 +512,17 @@
 .
 
 # Actuators
-:Actuator a rr:TriplesMap;
+_:Actuator a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/resourcereports/actuator/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
@@ -544,17 +543,17 @@
 .
 
 # Types
-:Type a rr:TriplesMap;
+_:Type a rr:TriplesMap;
   rml:logicalSource [
     a rml:LogicalSource;
-    rml:source :WoTWebAPISource;
+    rml:source _:WoTWebAPISource;
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.[*]";
   ];
   rr:subjectMap [
     rr:termType rr:IRI;
     rr:template "https://blue-bike.be/resourcereports/type/{id}#{last_seen}";
-    rml:logicalTarget :TargetDump;
+    rml:logicalTarget _:TargetDump;
   ];
 
   # rdf:type
