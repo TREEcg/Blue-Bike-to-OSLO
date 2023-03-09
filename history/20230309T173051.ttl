@@ -1,5 +1,5 @@
 
-<http://example.org/rules/https%3A%2F%2Ftreecg.github.io%2FBlue-Bike-to-OSLO%2Fhistory%2Fbluebike.ttl#eventstream>
+<https://treecg.github.io/Blue-Bike-to-OSLO/history/bluebike.ttl#eventstream>
   a <https://w3id.org/ldes#EventStream>;
   <https://w3id.org/tree#member> <https://blue-bike.be/resourcereports/103#2023-03-09T18%3A26%3A15>,
     <https://blue-bike.be/resourcereports/104#2023-03-09T18%3A30%3A07>, <https://blue-bike.be/resourcereports/105#2023-03-09T18%3A27%3A56>,
