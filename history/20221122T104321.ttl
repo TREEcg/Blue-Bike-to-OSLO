@@ -4468,5 +4468,5 @@
 
 <https://treecg.github.io/Blue-Bike-to-OSLO/history/bluebike.ttl#retention> a <https://w3id.org/ldes#LatestVersionSubset>;
   <https://w3id.org/ldes#amount> 1;
-  <https://w3id.org/ldes#timestampPath> <http://purl.org/dc/terms/created>;
+  <https://w3id.org/ldes#timestampPath> <http://purl.org/dc/elements/1.1/date>;
   <https://w3id.org/ldes#versionOfPath> <http://purl.org/dc/terms/isVersionOf> .
