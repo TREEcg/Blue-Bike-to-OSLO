@@ -194,7 +194,7 @@ _:RetentionPolicyTriplesMap a rr:TriplesMap;
   # ldes:timestampPath
   rr:predicateObjectMap [
     rr:predicate ldes:timestampPath;
-    rr:object dcterms:created;
+    rr:object elements:date;
   ];
   # ldes:versionOfPath
   rr:predicateObjectMap [
